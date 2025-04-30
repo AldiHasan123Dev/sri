@@ -68,7 +68,7 @@
 
               <div class="watch-video d-flex align-items-center position-relative" data-aos="fade-up" data-aos-delay="300">
                 <div class="d-flex flex-row gap-2 flex-wrap">
-                  <a href="contact.html"
+                  <a href="/contact"
                      class="btn btn-lg btn-danger"
                      style="border: none; color: white;">
                      Daftar Sekarang!

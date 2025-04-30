@@ -33,7 +33,7 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="/" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Ponpes Assalam</h1><span>.</span>
@@ -41,7 +41,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/home" class="active">Beranda</a></li>
+          <li><a href="/" class="active">Beranda</a></li>
           <li><a href="/about"><span>Tentang Kami</span></a>
             <!-- <ul>
               <li><a href="team.html">Team</a></li>
