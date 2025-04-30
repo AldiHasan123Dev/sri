@@ -19,6 +19,18 @@ Route::get('/about', function () {
     return view('landing.about');
 })->name('about');
 
+Route::get('/portofolio', function () {
+    return view('landing.portofolio');
+})->name('portofolio');
+
+Route::get('/portofolio-details', function () {
+    return view('landing.portofolio-details');
+})->name('portofolio-details');
+
+Route::get('/pricing', function () {
+    return view('landing.pricing');
+})->name('pricing');
+
 Route::get('/contact', function () {
     return view('landing.contact');
 })->name('contact');
