@@ -23,6 +23,10 @@ Route::get('/portofolio', function () {
     return view('landing.portofolio');
 })->name('portofolio');
 
+Route::get('/pendidikan', function () {
+    return view('landing.service');
+})->name('pendidikan');
+
 Route::get('/portofolio-details', function () {
     return view('landing.portofolio-details');
 })->name('portofolio-details');

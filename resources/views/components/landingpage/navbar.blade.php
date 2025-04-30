@@ -57,7 +57,7 @@
               </li>
             </ul> -->
           </li>
-          <li><a href="/service">Pendidikan</a></li>
+          <li><a href="/pendidikan">Pendidikan</a></li>
           <!-- <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="pricing.html">Pricing</a></li> -->
           <li><a href="/blog">Blog</a></li>
