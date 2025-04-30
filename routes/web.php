@@ -11,6 +11,10 @@ Route::get('/blog', function () {
     return view('landing.blog');
 })->name('blog');
 
+Route::get('/blog-details', function () {
+    return view('landing.blog-details');
+})->name('blog-details');
+
 Route::get('/about', function () {
     return view('landing.about');
 })->name('about');
