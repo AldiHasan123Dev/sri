@@ -19,6 +19,10 @@ Route::get('/about', function () {
     return view('landing.about');
 })->name('about');
 
+Route::get('/contact', function () {
+    return view('landing.contact');
+})->name('contact');
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
