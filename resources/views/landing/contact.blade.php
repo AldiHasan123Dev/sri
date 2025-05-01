@@ -57,11 +57,8 @@
           </div>
 
           <div class="col-lg-8">
-            <p>Jika Anda ingin mengetahui informasi lebih lanjut, atau berminat mendaftarkan putra/putri Anda sebagai santri, silakan hubungi kami melalui informasi yang tersedia di bawah ini.
-              
-              <p>📍 Lokasi Pondok Pesantren dapat dilihat pada peta.</p>
-              <p>📧 Hubungi kami melalui email atau WhatsApp untuk komunikasi yang lebih cepat.</p>
-              <p>📝 Jangan lupa, klik tombol <a href="#" class="btn btn-lg btn-danger"> Daftar </a> untuk melakukan pendaftaran secara online.</p>
+            <p>Jika Anda ingin mengetahui informasi lebih lanjut, atau berminat mendaftarkan putra/putri Anda sebagai santri, ilakan hubungi kami kami melalui email atau WhatsApp untuk komunikasi yang lebih cepat.</p>
+              <p>📝 Jangan lupa, klik tombol <a href="https://docs.google.com/forms/d/e/1FAIpQLScO5gBOVwhhrfcH46wDX8KJlvu61r9F1s8ZLQIigOlfgxN0dQ/viewform?usp=sharing" class="btn btn-lg btn-danger"> Daftar </a> untuk melakukan pendaftaran secara online.</p>
               
           </div><!-- End Contact Form -->
 

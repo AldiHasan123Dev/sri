@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Home - Ponpes As-Salam</title>
+    <title>Pondok Pesantren Assalam</title>
   
     <!-- Favicons -->
     <link href="{{ asset('build/assets/img/logo2.jpeg') }}" rel="icon">
@@ -41,27 +41,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/" class="active">Beranda</a></li>
-          <li><a href="/about"><span>Tentang Kami</span></a>
-            <!-- <ul>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-            </ul> -->
-          </li>
-          <li><a href="/pendidikan">Pendidikan</a></li>
-          <!-- <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li> -->
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Kontak</a></li>
+          <li><a href="/" class="{{ Request::is('/') ? 'active' : '' }}">Beranda</a></li>
+          <li><a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">Tentang Kami</a></li>
+          <li><a href="/pendidikan" class="{{ Request::is('pendidikan') ? 'active' : '' }}">Pendidikan</a></li>
+          <li><a href="/blog" class="{{ Request::is('blog') ? 'active' : '' }}">Blog</a></li>
+          <li><a href="/contact" class="{{ Request::is('contact') ? 'active' : '' }}">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

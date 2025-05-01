@@ -90,7 +90,7 @@
       <div class="container">
 
         <div class="row gy-4">
-          <h2 style="text-align: center; font-weight: bold;">Ilmu yang Diajarkan</h2>
+          <h2 style="text-align: center; font-weight: bold;">Ilmu yang Diajarkan di Pondok Pesantren Assalam</h2>
 
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -101,9 +101,9 @@
                 </svg>
                 <i class="bi bi-activity"></i>
               </div>
-                <h3>Nesciunt Mete</h3>
+                <h3>Aqidah Akhlaq</h3>
               </a>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <p>Ilmu yang mengajarkan tentang...</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -115,9 +115,9 @@
                 </svg>
                 <i class="bi bi-broadcast"></i>
               </div>
-                <h3>Eosle Commodi</h3>
+                <h3>Fiqih</h3>
               </a>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+              <p>Kitab yang mengajarkan tentang...</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -129,9 +129,9 @@
                 </svg>
                 <i class="bi bi-easel"></i>
               </div>
-                <h3>Ledo Markt</h3>
+                <h3>Riyadush Sholihin</h3>
               </a>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+              <p>Kitab yang mengajarkan...</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -143,9 +143,9 @@
                 </svg>
                 <i class="bi bi-bounding-box-circles"></i>
               </div>
-                <h3>Asperiores Commodit</h3>
+                <h3>Sirah Nabawiyah</h3>
               </a>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <p>Menceritakan Kisah kisah Nabi</p>
              
             </div>
           </div><!-- End Service Item -->
@@ -158,9 +158,9 @@
                 </svg>
                 <i class="bi bi-calendar4-week icon"></i>
               </div>
-                <h3>Velit Doloremque</h3>
+                <h3>Fathul Izar</h3>
               </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <p>Kitab yang mengajarkan...</p>
               
             </div>
           </div><!-- End Service Item -->
@@ -173,9 +173,9 @@
                 </svg>
                 <i class="bi bi-chat-square-text"></i>
               </div>
-                <h3>Dolori Architecto</h3>
+                <h3>Sulam Safinah</h3>
               </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <p>Kitab yang mengajarkan...</p>
               
             </div>
           </div><!-- End Service Item -->
@@ -191,7 +191,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Clients</h2>
+        {{-- <h2>Clients</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
@@ -229,7 +229,7 @@
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="{{ asset('build/assets/img/clients/client-8.png') }}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          </div><!-- End Client Item --> --}}
 
         </div>
 
