@@ -18,7 +18,7 @@
     <section id="contact" class="contact section">
 
       <div class="mb-5">
-        <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
+        <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3954.1323399104294!2d112.8789516!3d-7.6689185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7cf67162e8489%3A0x2ee9c8c07d11e17b!2sPONDOK%20PESANTREN%20ASSALAM!5e0!3m2!1sid!2sid!4v1746018105279!5m2!1sid!2sid" frameborder="0" allowfullscreen=""></iframe>
       </div><!-- End Google Maps -->
 
       <div class="container" data-aos="fade">
@@ -28,14 +28,11 @@
           <div class="col-lg-4">
 
             <div class="info">
-              <h3>Get in touch</h3>
-              <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
-
               <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h4>Lokasi:</h4>
+                  <p>Jl. Parasrejo, Blusuk, Paras Rejo, Kec. Pohjentrek, Kota Pasuruan, Jawa Timur 67171</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -51,7 +48,7 @@
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
                   <h4>Call:</h4>
-                  <p>+1 5589 55488 55</p>
+                  <p>+62888888888</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -60,28 +57,9 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            <p>Jika Anda ingin mengetahui informasi lebih lanjut, atau berminat mendaftarkan putra/putri Anda sebagai santri, ilakan hubungi kami kami melalui email atau WhatsApp untuk komunikasi yang lebih cepat.</p>
+              <p>📝 Jangan lupa, klik tombol <a href="https://docs.google.com/forms/d/e/1FAIpQLScO5gBOVwhhrfcH46wDX8KJlvu61r9F1s8ZLQIigOlfgxN0dQ/viewform?usp=sharing" class="btn btn-lg btn-danger"> Daftar </a> untuk melakukan pendaftaran secara online.</p>
+              
           </div><!-- End Contact Form -->
 
         </div>

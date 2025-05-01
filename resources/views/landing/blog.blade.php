@@ -7,7 +7,7 @@
         <h1 class="mb-2 mb-lg-0">Blog</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/">Home</a></li>
+            <li><a href="/">Beranda</a></li>
             <li class="current">Blog</li>
           </ol>
         </nav>
@@ -23,7 +23,7 @@
           <div class="col-lg-4">
             <article class="position-relative h-100">
 
-              <div class="post-img position-relative overflow-hidden">
+              {{-- <div class="post-img position-relative overflow-hidden">
                 <img src="{{ asset('build/assets/img/blog/blog-1.jpg') }}" class="img-fluid" alt="">
                 <span class="post-date">December 12</span>
               </div>
@@ -225,7 +225,7 @@
 
                 <a href="/blog-details" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
-              </div>
+              </div> --}}
 
             </article>
           </div><!-- End post list item -->

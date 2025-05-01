@@ -8,16 +8,16 @@
               <span class="sitename">Ponpes Assalam</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>Bangil</p>
-              <p>Pasuruan, Indonesia</p>
+              <p>Jl. Parasrejo, Blusuk, Paras Rejo,</p>
+              <p>Kec. Pohjentrek, Kota Pasuruan, Jawa Timur 67171</p>
               <p class="mt-3"><strong>Phone:</strong> <span>+62 8888888</span></p>
               <p><strong>Email:</strong> <span>assalam@example.com</span></p>
             </div>
-            <div class="social-links d-flex justify-content-center gap-3 mt-4">
+            {{-- <div class="social-links d-flex justify-content-center gap-3 mt-4">
               <a href=""><i class="bi bi-facebook"></i></a>
               <a href=""><i class="bi bi-instagram"></i></a>
               <a href=""><i class="bi bi-youtube"></i></a>
-            </div>
+            </div> --}}
           </div>
         </footer>
         
