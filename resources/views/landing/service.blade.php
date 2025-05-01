@@ -31,7 +31,6 @@
                 </svg>
                 <i class="bi bi-activity"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
                 <h3>Nesciunt Mete</h3>
               </a>
               <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
@@ -46,7 +45,6 @@
                 </svg>
                 <i class="bi bi-broadcast"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
                 <h3>Eosle Commodi</h3>
               </a>
               <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
@@ -61,7 +59,6 @@
                 </svg>
                 <i class="bi bi-easel"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
                 <h3>Ledo Markt</h3>
               </a>
               <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
@@ -76,11 +73,10 @@
                 </svg>
                 <i class="bi bi-bounding-box-circles"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
                 <h3>Asperiores Commodit</h3>
               </a>
               <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-              <a href="service-details.html" class="stretched-link"></a>
+             
             </div>
           </div><!-- End Service Item -->
 
@@ -92,11 +88,10 @@
                 </svg>
                 <i class="bi bi-calendar4-week icon"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
                 <h3>Velit Doloremque</h3>
               </a>
               <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="service-details.html" class="stretched-link"></a>
+              
             </div>
           </div><!-- End Service Item -->
 
@@ -108,11 +103,10 @@
                 </svg>
                 <i class="bi bi-chat-square-text"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
                 <h3>Dolori Architecto</h3>
               </a>
               <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-              <a href="service-details.html" class="stretched-link"></a>
+              
             </div>
           </div><!-- End Service Item -->
 
@@ -137,89 +131,93 @@
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="features-item">
-              <i class="bi bi-eye" style="color: #ffbb2c;"></i>
-              <h3><a href="" class="stretched-link">Lorem Ipsum</a></h3>
+              <i class="bi bi-house" style="color: #ffbb2c;"></i>
+              <h3>Masjid</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="features-item">
-              <i class="bi bi-infinity" style="color: #5578ff;"></i>
-              <h3><a href="" class="stretched-link">Dolor Sitema</a></h3>
+              <i class="bi bi-book" style="color: #5578ff;"></i>
+              <h3>Sekolahan</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="features-item">
-              <i class="bi bi-mortarboard" style="color: #e80368;"></i>
-              <h3><a href="" class="stretched-link">Sed perspiciatis</a></h3>
+              <i class="bi bi-pc-display-horizontal" style="color: #e80368;"></i>
+              <h3>Lab Komputer</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
             <div class="features-item">
               <i class="bi bi-nut" style="color: #e361ff;"></i>
-              <h3><a href="" class="stretched-link">Magni Dolores</a></h3>
+              <h3>Bengkel Las Kejuruan</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+          {{-- <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="features-item">
               <i class="bi bi-shuffle" style="color: #47aeff;"></i>
-              <h3><a href="" class="stretched-link">Nemo Enim</a></h3>
+              <h3>Nemo Enim</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
             <div class="features-item">
               <i class="bi bi-star" style="color: #ffa76e;"></i>
-              <h3><a href="" class="stretched-link">Eiusmod Tempor</a></h3>
+              <h3>Eiusmod Tempor</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
             <div class="features-item">
               <i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
-              <h3><a href="" class="stretched-link">Midela Teren</a></h3>
+              <h3>Midela Teren</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
             <div class="features-item">
               <i class="bi bi-camera-video" style="color: #4233ff;"></i>
-              <h3><a href="" class="stretched-link">Pira Neve</a></h3>
+              <h3>Pira Neve</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
             <div class="features-item">
               <i class="bi bi-command" style="color: #b2904f;"></i>
-              <h3><a href="" class="stretched-link">Dirada Pack</a></h3>
+              <h3>Dirada Pack</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
             <div class="features-item">
               <i class="bi bi-dribbble" style="color: #b20969;"></i>
-              <h3><a href="" class="stretched-link">Moton Ideal</a></h3>
+              <h3>Moton Ideal</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
             <div class="features-item">
               <i class="bi bi-activity" style="color: #ff5828;"></i>
-              <h3><a href="" class="stretched-link">Verdo Park</a></h3>
+              <h3>Verdo Park</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
             <div class="features-item">
               <i class="bi bi-brightness-high" style="color: #29cc61;"></i>
-              <h3><a href="" class="stretched-link">Flavor Nivelanda</a></h3>
-            </div>
+              <h3>Flavor Nivelanda</a></h3>
+            </div> --}}
           </div><!-- End Feature Item -->
 
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
 
       </div>
 
