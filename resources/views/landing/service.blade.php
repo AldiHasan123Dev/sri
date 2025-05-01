@@ -4,11 +4,11 @@
     <!-- Page Title -->
     <div class="page-title accent-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Services</h1>
+        <h1 class="mb-2 mb-lg-0">Pendidikan</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Services</li>
+            <li class="current">Pendidikan</li>
           </ol>
         </nav>
       </div>
@@ -20,6 +20,8 @@
       <div class="container">
 
         <div class="row gy-4">
+          <h2 style="text-align: center; font-weight: bold;">Ilmu yang Diajarkan</h2>
+
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item item-cyan position-relative">
@@ -125,8 +127,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Features</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Fasilitas</h2>
+        <p>Fasilitas yang terdapat di Pondok Pesantren Assalam </p>
       </div><!-- End Section Title -->
 
       <div class="container">
