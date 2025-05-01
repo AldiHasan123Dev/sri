@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BeritaController;
 use Livewire\Volt\Volt;
+use App\Http\Controllers\PengurusController;
 
 Route::get('/', function () {
     return view('landing.index');
@@ -44,6 +46,22 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+//admin
+    Route::get('/admin/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('dashboard');
+    Route::get('/admin/pengurus', [PengurusController::class, 'index'])->name('pengurus.index');
+    // Menyimpan data pengurus
+    Route::post('/admin/pengurus/simpan', [PengurusController::class, 'store'])->name('pengurus.store');
+    Route::get('pengurus/{id}/edit', [PengurusController::class, 'edit'])->name('pengurus.edit');
+    Route::delete('pengurus/{id}', [PengurusController::class, 'destroy'])->name('pengurus.destroy');
+    Route::put('pengurus/{id}', [PengurusController::class, 'update'])->name('pengurus.update');
+    
+Route::resource('berita', BeritaController::class);
+// Route untuk mengubah status berita menjadi "Published"
+Route::post('/berita/{id}/publish', [BeritaController::class, 'publish'])->name('berita.publish');
+
+    
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 

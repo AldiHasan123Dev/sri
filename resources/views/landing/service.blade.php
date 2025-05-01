@@ -208,7 +208,7 @@
               <i class="bi bi-activity" style="color: #ff5828;"></i>
               <h3><a href="" class="stretched-link">Verdo Park</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Feature Item --> 
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
             <div class="features-item">
