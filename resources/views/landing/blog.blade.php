@@ -20,240 +20,63 @@
       <div class="container">
         <div class="row gy-4">
 
+          @foreach($newsList as $news)
           <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              {{-- <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('build/assets/img/blog/blog-1.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">John Doe</span>
+              <article class="position-relative h-100">
+  
+                  <!-- Gambar Post -->
+                  <div class="post-img position-relative overflow-hidden">
+                    <img src="{{ asset('storage/' . $news->gambar) }}" class="img-fluid w-100 object-fit-cover" alt="{{ $news->judul }}" style="height: 250px;">
+                      <span class="post-date">{{ \Carbon\Carbon::parse($news->published_at)->format('F d') }}</span>
                   </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+  
+                  <!-- Konten Post -->
+                  <div class="post-content d-flex flex-column">
+  
+                      <h3 class="post-title">{{ $news->judul }}</h3>
+  
+                      <div class="meta d-flex align-items-center">
+                          <div class="d-flex align-items-center">
+                              <i class="bi bi-person"></i> <span class="ps-2">{{ $news->penulis }}</span>
+                          </div>
+                          <span class="px-3 text-black-50">/</span>
+                          <div class="d-flex align-items-center">
+                              <i class="bi bi-folder2"></i> <span class="ps-2">{{ $news->kategori }}</span>
+                          </div>
+                      </div>
+  
+                      <p>
+                          {{ Str::limit($news->isi, 100) }} <!-- Menampilkan 100 karakter pertama -->
+                      </p>
+  
+                      <hr>
+  
+                      <a href="{{ route('blog.show', $news->slug) }}" class="readmore stretched-link">
+                          <span>Baca Selengkapnya</span><i class="bi bi-arrow-right"></i>
+                      </a>
+  
                   </div>
-                </div>
-
-                <p>
-                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                </p>
-
-                <hr>
-
-                <a href="/blog-details" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('build/assets/img/blog/blog-2.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">March 19</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Nisi magni odit consequatur autem nulla dolorem</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                  </div>
-                </div>
-
-                <p>
-                  Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
-                </p>
-
-                <hr>
-
-                <a href="/blog-details" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('build/assets/img/blog/blog-3.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">June 24</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                  </div>
-                </div>
-
-                <p>
-                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
-                </p>
-
-                <hr>
-
-                <a href="/blog-details" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('build/assets/img/blog/blog-4.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">August 05</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                  </div>
-                </div>
-
-                <p>
-                  Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                </p>
-
-                <hr>
-
-                <a href="/blog-details" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('build/assets/img/blog/blog-5.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">September 17</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Accusamus quaerat aliquam qui debitis facilis consequatur</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">John Parker</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                  </div>
-                </div>
-
-                <p>
-                  In itaque assumenda aliquam voluptatem qui temporibus iusto nisi quia. Autem vitae quas aperiam nesciunt mollitia tempora odio omnis. Ipsa odit sit ut amet necessitatibus. Quo ullam ut corrupti autem consequuntur totam dolorem.
-                </p>
-
-                <hr>
-
-                <a href="/blog-details" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('build/assets/img/blog/blog-6.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">December 07</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Distinctio provident quibusdam numquam aperiam aut</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia White</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                  </div>
-                </div>
-
-                <p>
-                  Expedita et temporibus eligendi enim molestiae est architecto praesentium dolores. Illo laboriosam officiis quis. Labore officia quia sit voluptatem nisi est dignissimos totam. Et voluptate et consectetur voluptatem id dolor magni impedit. Omnis dolores sit.
-                </p>
-
-                <hr>
-
-                <a href="/blog-details" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div> --}}
-
-            </article>
-          </div><!-- End post list item -->
-
+  
+              </article>
+          </div>
+      @endforeach
         </div>
       </div>
 
     </section><!-- /Blog Posts Section -->
 
     <!-- Blog Pagination Section -->
-    <section id="blog-pagination" class="blog-pagination section">
+    <!-- Blog Pagination Section -->
+<section id="blog-pagination" class="blog-pagination section">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      {{ $newsList->links('vendor.pagination.bootstrap-5') }} 
+      {{-- gunakan 'bootstrap-5' jika kamu menggunakan Bootstrap --}}
+    </div>
+  </div>
+</section>
 
-      <div class="container">
-        <div class="d-flex justify-content-center">
-          <ul>
-            <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#" class="active">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li>...</li>
-            <li><a href="#">10</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
-          </ul>
-        </div>
-      </div>
-
-    </section><!-- /Blog Pagination Section -->
+    
 
   </main>
 

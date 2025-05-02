@@ -13,7 +13,7 @@ class AuthenticationTest extends TestCase
 
     public function test_login_screen_can_be_rendered(): void
     {
-        $response = $this->get('/login');
+        $response = $this->get('/login-admin');
 
         $response->assertStatus(200);
     }
@@ -25,7 +25,7 @@ class AuthenticationTest extends TestCase
         $response = LivewireVolt::test('auth.login')
             ->set('email', $user->email)
             ->set('password', 'password')
-            ->call('login');
+            ->call('login.admin');
 
         $response
             ->assertHasNoErrors()
@@ -41,7 +41,7 @@ class AuthenticationTest extends TestCase
         $response = LivewireVolt::test('auth.login')
             ->set('email', $user->email)
             ->set('password', 'wrong-password')
-            ->call('login');
+            ->call('login.admin');
 
         $response->assertHasErrors('email');
 

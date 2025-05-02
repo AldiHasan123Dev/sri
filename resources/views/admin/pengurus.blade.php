@@ -7,7 +7,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <div class="container mt-4">
-    @if(session('success'))
+@if(session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         {{ session('success') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -123,7 +123,7 @@
                 <h5 class="modal-title" id="editPengurusModalLabel">Edit Pengurus</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form id="editPengurusForm" action="{{ route('berita.update', ['id' => '']) }}" method="POST" enctype="multipart/form-data">
+            <form id="editPengurusForm" action="" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
@@ -168,15 +168,6 @@
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $('#editBeritaModal').on('show.bs.modal', function(event) {
-    var button = $(event.relatedTarget); // Tombol yang memicu modal
-    var id = button.data('id'); // Ambil ID dari data-id
-    var actionUrl = '{{ route('berita.update', '') }}/' + id; // Buat URL action
-    
-    var modal = $(this);
-    modal.find('#editBeritaForm').attr('action', actionUrl); // Set URL action ke form
-});
-
 function editPengurus(id) {
     $.ajax({
         url: '/pengurus/' + id + '/edit',

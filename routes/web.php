@@ -4,18 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
 use Livewire\Volt\Volt;
 use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LandingPageController;
 
 Route::get('/', function () {
     return view('landing.index');
 })->name('home');
 
-Route::get('/blog', function () {
-    return view('landing.blog');
-})->name('blog');
+Route::get('/blog', [LandingPageController::class, 'index'])->name('blog.index');
 
-Route::get('/blog-details', function () {
-    return view('landing.blog-details');
-})->name('blog-details');
+// Route untuk menampilkan detail blog berdasarkan slug
+Route::get('/blog/{slug}', [LandingPageController::class, 'show'])->name('blog.show');
 
 Route::get('/about', function () {
     return view('landing.about');
@@ -47,27 +46,22 @@ Route::view('dashboard', 'dashboard')
     ->name('dashboard');
 
 //admin
+Route::get('/login-admin', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login-auth', [AuthController::class, 'login'])->name('login.auth');
+
+// Grup route dengan middleware 'auth'
+Route::middleware('auth')->group(function () {
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
+
     Route::get('/admin/pengurus', [PengurusController::class, 'index'])->name('pengurus.index');
-    // Menyimpan data pengurus
     Route::post('/admin/pengurus/simpan', [PengurusController::class, 'store'])->name('pengurus.store');
-    Route::get('pengurus/{id}/edit', [PengurusController::class, 'edit'])->name('pengurus.edit');
-    Route::delete('pengurus/{id}', [PengurusController::class, 'destroy'])->name('pengurus.destroy');
-    Route::put('pengurus/{id}', [PengurusController::class, 'update'])->name('pengurus.update');
-    
-Route::resource('berita', BeritaController::class);
-// Route untuk mengubah status berita menjadi "Published"
-Route::post('/berita/{id}/publish', [BeritaController::class, 'publish'])->name('berita.publish');
+    Route::get('/pengurus/{id}/edit', [PengurusController::class, 'edit'])->name('pengurus.edit');
+    Route::delete('/pengurus/{id}', [PengurusController::class, 'destroy'])->name('pengurus.destroy');
+    Route::put('/pengurus/{id}', [PengurusController::class, 'update'])->name('pengurus.update');
 
-    
-Route::middleware(['auth'])->group(function () {
-    Route::redirect('settings', 'settings/profile');
-
-    Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
-    Volt::route('settings/password', 'settings.password')->name('settings.password');
-    Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
+    Route::resource('berita', BeritaController::class);
+    Route::post('/berita/{id}/publish', [BeritaController::class, 'publish'])->name('berita.publish');
 });
-
-require __DIR__.'/auth.php';

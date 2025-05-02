@@ -88,7 +88,7 @@
                     <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="dropdownUser">
                         <li><a class="dropdown-item" href="/profile">Ganti Password</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-danger" href="/logout">Logout</a></li>
+                        <li><a class="dropdown-item text-danger" href="{{ route('logout') }}">Logout</a></li>
                     </ul>
                 </div>
             </div>
