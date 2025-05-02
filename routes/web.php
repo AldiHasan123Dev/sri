@@ -16,9 +16,7 @@ Route::get('/blog', [LandingPageController::class, 'index'])->name('blog.index')
 // Route untuk menampilkan detail blog berdasarkan slug
 Route::get('/blog/{slug}', [LandingPageController::class, 'show'])->name('blog.show');
 
-Route::get('/about', function () {
-    return view('landing.about');
-})->name('about');
+Route::get('/about', [LandingPageController::class, 'pengurus'])->name('about.pengurus');
 
 Route::get('/portofolio', function () {
     return view('landing.portofolio');

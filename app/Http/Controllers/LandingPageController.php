@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Berita;
+use App\Models\Pengurus;
 
 class LandingPageController extends Controller
 {
@@ -22,5 +23,9 @@ public function show($slug)
     return view('landing.blog-details', compact('news'));
 }
 
+public function pengurus(){
+    $pengurus = Pengurus::all(); // Sesuaikan jumlah item per halaman
+    return view('landing.about', compact('pengurus'));
+}
 
 }
