@@ -7,7 +7,7 @@
     <title>Pondok Pesantren Assalam</title>
   
     <!-- Favicons -->
-    <link href="{{ asset('build/assets/img/logo2.jpeg') }}" rel="icon">
+    <link href="{{ asset('build/assets/img/logo3.png') }}" rel="icon">
     <link href="{{ asset('build/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
   
     <!-- Google Fonts -->
@@ -34,21 +34,35 @@
     <div class="container position-relative d-flex align-items-center">
 
       <a href="/" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Ponpes Assalam</h1><span>.</span>
-      </a>
+        <img src="{{ asset('build/assets/img/logo_navbar1.png') }}" alt="Logo Ponpes Assalam" style="height: 140px; margin-right: 10px;">
+        </a>
+      
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="/" class="{{ Request::is('/') ? 'active' : '' }}">Beranda</a></li>
-          <li><a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">Tentang Kami</a></li>
-          <li><a href="/pendidikan" class="{{ Request::is('pendidikan') ? 'active' : '' }}">Pendidikan</a></li>
-          <li><a href="/blog" class="{{ Request::is('blog') ? 'active' : '' }}">Blog</a></li>
-          <li><a href="/contact" class="{{ Request::is('contact') ? 'active' : '' }}">Kontak</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="/" class="{{ Request::is('/') ? 'active' : '' }}">Beranda</a></li>
+            <li><a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">Tentang Kami</a></li>
+        
+            <li class="dropdown">
+              <a href="#" class="{{ Request::is('pendidikan*') ? 'active' : '' }}">
+                <span>Pendidikan</span> <i class="bi bi-chevron-down"></i>
+              </a>
+              <ul>
+                <li><a href="/pendidikan" class="{{ Request::is('pendidikan/ponpes') ? 'active' : '' }}">PonPes Tahfidzul Qur'an Assalam Plus</a></li>
+                <li><a href="/pendidikan/kbihu" class="{{ Request::is('pendidikan/kbihu') ? 'active' : '' }}">KBIHU Assalam Pasuruan</a></li>
+                <li><a href="/pendidikan/mts" class="{{ Request::is('pendidikan/mts') ? 'active' : '' }}">Mts Assalam</a></li>
+                <li><a href="/pendidikan/sma" class="{{ Request::is('pendidikan/sma') ? 'active' : '' }}">SMAIT Assalam</a></li>
+                <li><a href="/pendidikan/madin" class="{{ Request::is('pendidikan/madin') ? 'active' : '' }}">Madin Roudhotul Uqul Assalam</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="/blog" class="{{ Request::is('blog') ? 'active' : '' }}">Blog</a></li>
+            <li><a href="/contact" class="{{ Request::is('contact') ? 'active' : '' }}">Kontak</a></li>
+          </ul>
+        
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        
 
     </div>
   </header>

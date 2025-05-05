@@ -45,10 +45,10 @@
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex">
-                <i class="bi bi-phone flex-shrink-0"></i>
+                <i class="bi bi-whatsapp flex-shrink-0"></i>
                 <div>
-                  <h4>Call:</h4>
-                  <p>+62888888888</p>
+                  <h4>WhatsApp:</h4>
+                  <a href="">+62888888888</a>
                 </div>
               </div><!-- End Info Item -->
 
