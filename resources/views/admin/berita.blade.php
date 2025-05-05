@@ -74,6 +74,14 @@
                                     <div class="mb-3">
                                         {!! nl2br(e($berita->isi)) !!}
                                     </div>
+                                    @if($berita->video)
+                                <div class="mb-3 text-center">
+                                            <video controls style="max-width: 450px; border-radius: 8px;">
+                                                <source src="{{ asset('storage/'.$berita->video) }}" type="video/mp4">
+                                                Browser Anda tidak mendukung pemutaran video.
+                                            </video>
+                                </div>
+                                    @endif
                                 </div>
                                 <div class="modal-footer d-flex justify-content-between">
                                     <div>
@@ -120,7 +128,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="edit_kategori">Kategori</label>
-                        <input type="text" class="form-control" id="edit_kategori" name="kategori" required>
+                        <select class="form-control" id="edit_kategori" name="kategori" required>
+                            <option value="" selected>Pilih Kategori</option>
+                            <option value="Prestasi">Prestasi</option>
+                            <option value="Kegiatan">Kegiatan</option>
+                            <option value="Berita">Berita</option>
+                            <option value="Informasi">Informasi</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="edit_isi">Isi</label>
@@ -133,11 +147,36 @@
                             <option value="published">Published</option>
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="edit_gambar">Gambar Baru (opsional)</label>
-                        <input type="file" class="form-control" id="edit_gambar" name="gambar">
-                        <small id="edit_gambarPreview" class="form-text text-muted"></small>
+
+                    <!-- Bagian Gambar dan Video Sejajar -->
+                    <div class="mb-3 d-flex align-items-start gap-3">
+                        <!-- Gambar Baru -->
+                        <div style="flex: 1;">
+                            <label for="edit_gambar">Gambar Baru (opsional)</label>
+                            <input type="file" class="form-control" id="edit_gambar" name="gambar" accept="image/*">
+                            <small id="edit_gambarPreview" class="form-text text-muted"></small>
+                        </div>
+
+                        <!-- Preview Gambar -->
+                        <div id="edit_gambarPreviewContainer" style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                            {{-- Preview Gambar akan ditampilkan di sini --}}
+                        </div>
                     </div>
+
+                    <!-- Bagian Video (Input dan Preview Video Sejajar) -->
+                    <div class="mb-3 d-flex align-items-start gap-3">
+                        <!-- Input File Video -->
+                        <div style="flex: 1;">
+                            <label for="edit_video" class="form-label">Video (Opsional)</label>
+                            <input type="file" class="form-control" id="edit_video" name="video" accept="video/mp4,video/quicktime">
+                        </div>
+
+                        <!-- Preview Video -->
+                        <div id="edit_videoPreview" style="flex: 1;">
+                            {{-- Akan diisi lewat JavaScript --}}
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -147,6 +186,8 @@
         </div>
     </div>
 </div>
+
+
 
 <!-- Modal Form Tambah Berita -->
 <div class="modal fade" id="tambahBeritaModal" tabindex="-1" aria-labelledby="tambahBeritaModalLabel" aria-hidden="true">
@@ -169,8 +210,14 @@
                         <input type="text" class="form-control" id="penulis" name="penulis" required>
                     </div>
                     <div class="mb-3">
-                        <label for="kategori" class="form-label">Kategori</label>
-                        <input type="text" class="form-control" id="kategori" name="kategori" required>
+                        <label for="kategori">Kategori</label>
+                        <select class="form-control" id="kategori" name="kategori" required>
+                            <option value="" selected>Pilih Kategori</option>
+                            <option value="Prestasi">Pretasi</option>
+                            <option value="Kegiatan">Kegiatan</option>
+                            <option value="Berita">Berita</option>
+                            <option value="Informasi">Informasi</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="isi" class="form-label">Isi</label>
@@ -180,6 +227,10 @@
                         <label for="gambar" class="form-label">Gambar</label>
                         <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*">
                     </div>
+                    <div class="mb-3">
+                        <label for="video" class="form-label">Video (Opsional)</label>
+                        <input type="file" class="form-control" id="video" name="video" accept="video/mp4,video/quicktime">
+                    </div>                    
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             </div>
@@ -207,9 +258,20 @@
                 $('#edit_status').val(response.stts);
                 $('#editBeritaForm').attr('action', '/berita/' + id);
                 if (response.gambar) {
-                    $('#edit_gambarPreview').html('<img src="' + response.gambar + '" class="img-fluid" style="max-width: 150px;">');
+                    $('#edit_gambarPreview').html('<img src="storage/' + response.gambar + '" class="img-fluid" style="max-width: 150px;">');
                 } else {
                     $('#edit_gambarPreview').html('Tidak ada gambar sebelumnya.');
+                }
+                if (response.video) {
+                    $('#edit_videoPreview').html(`
+    <video controls style="max-width: 150px; height:300px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+        <source src="storage/${response.video}" type="video/mp4">
+        Browser tidak mendukung tag video.
+    </video>
+`);
+
+                } else {
+                    $('#edit_videoPreview').html('Tidak ada video sebelumnya.');
                 }
             },
             error: function(xhr, status, error) {

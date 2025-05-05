@@ -26,6 +26,11 @@ class BeritaController extends Controller
             $gambarPath = $request->file('gambar')->store('berita_gambar', 'public');
         }
 
+        $videoPath = null;
+        if ($request->hasFile('video')) {
+            $videoPath = $request->file('video')->store('berita_video', 'public');
+        }
+
         Berita::create([
             'judul' => $request->judul,
             'slug' => Str::slug($request->judul),
@@ -34,6 +39,7 @@ class BeritaController extends Controller
             'stts' => 'private',
             'penulis' => $request->penulis,
             'gambar' => $gambarPath,
+            'video' => $videoPath,
         ]);
 
         return redirect()->route('berita.index')->with('success', 'Berita berhasil ditambahkan.');
@@ -82,6 +88,12 @@ class BeritaController extends Controller
             $berita->gambar = $gambarPath;
         }
 
+        if ($request->hasFile('video')) {
+            $videoPath = $request->file('video')->store('berita_video', 'public');
+            $berita->video = $videoPath;
+        }
+    
+
         $berita->update([
             'judul' => $request->judul,
             'slug' => Str::slug($request->judul),
@@ -89,6 +101,7 @@ class BeritaController extends Controller
             'kategori' => $request->kategori,
             'penulis' => $request->penulis,
             'gambar' => $berita->gambar,
+            'video' => $berita->video,
         ]);
 
         return redirect()->route('berita.index')->with('success', 'Berita berhasil diperbarui.');

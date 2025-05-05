@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link href="{{ asset('build/assets/img/logo2.jpeg') }}" rel="icon">
+    <link href="{{ asset('build/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {

@@ -16,6 +16,7 @@ class Berita extends Model
         'kategori',
         'penulis',
         'gambar',
+        'video',
         'published_at',
     ];
 

@@ -38,14 +38,57 @@
             <!-- Meta -->
             <div class="meta-top mb-4">
               <ul class="list-inline text-muted small">
-                <li class="list-inline-item me-3"><i class="bi bi-person"></i>Penulis : {{ $news->penulis }}</li>
-                <li class="list-inline-item"><i class="bi bi-clock"></i> Tanggal : {{ \Carbon\Carbon::parse($news->published_at)->translatedFormat('d F Y') }}</li>
+                <li class="list-inline-item me-3"><i class="bi bi-person"></i> Penulis: {{ $news->penulis }}</li>
+                <li class="list-inline-item"><i class="bi bi-clock"></i> Tanggal: {{ \Carbon\Carbon::parse($news->published_at)->translatedFormat('d F Y') }}</li>
               </ul>
             </div>
 
             <!-- Isi Konten -->
             <div class="content mb-5" style="line-height: 1.8;">
               {!! nl2br(e($news->isi)) !!}
+            </div>
+
+            <!-- Video -->
+@if($news->video)
+  <div class="video-container mb-4" style="border-radius: 12px; overflow: hidden;">
+    <video controls width="100%" style="border-radius: 12px;">
+      <source src="{{ asset('storage/' . $news->video) }}" type="video/mp4">
+      Browser Anda tidak mendukung pemutar video.
+    </video>
+  </div>
+@endif
+
+
+
+            <!-- Share Section -->
+            <div class="share-section mb-5">
+              <h6 class="text-muted mb-2">Bagikan Artikel Ini:</h6>
+              <div class="d-flex flex-wrap gap-2">
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::url()) }}"
+                   target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-facebook me-1"></i> Facebook
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/?url={{ urlencode(Request::url()) }}"
+                   target="_blank" class="btn btn-sm btn-outline-danger">
+                  <i class="bi bi-instagram me-1"></i> Instagram
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/share?url={{ urlencode(Request::url()) }}"
+                   target="_blank" class="btn btn-sm btn-outline-dark">
+                  <i class="bi bi-tiktok me-1"></i> TikTok
+                </a>
+
+                <!-- Copy Link -->
+                <button onclick="copyLink()" class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-link-45deg me-1"></i> Salin Tautan
+                </button>
+
+              </div>
             </div>
 
             <!-- Meta Bottom -->
@@ -62,11 +105,11 @@
 
       </div>
 
-      <!-- Sidebar Opsional -->
+      <!-- Sidebar -->
       <div class="col-lg-4 sidebar">
         <div class="widgets-container ps-lg-4">
 
-          {{-- Widget Kategori --}}
+          <!-- Widget Kategori -->
           <div class="widget-item mb-4">
             <h4 class="widget-title mb-3">Kategori</h4>
             <ul class="list-unstyled">
@@ -76,7 +119,7 @@
             </ul>
           </div>
 
-          {{-- Widget Tag --}}
+          <!-- Widget Tag -->
           <div class="widget-item">
             <h4 class="widget-title mb-3">Tags</h4>
             <div class="tags">
@@ -95,3 +138,14 @@
 </main>
 
 @include('components.landingpage.footer')
+
+<!-- Script Salin Tautan -->
+<script>
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(function () {
+      alert("Tautan berhasil disalin!");
+    }, function () {
+      alert("Gagal menyalin tautan.");
+    });
+  }
+</script>
