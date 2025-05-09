@@ -30,13 +30,12 @@ class BeritaController extends Controller
         if ($request->hasFile('video')) {
             $videoPath = $request->file('video')->store('berita_video', 'public');
         }
-
         Berita::create([
             'judul' => $request->judul,
             'slug' => Str::slug($request->judul),
             'isi' => $request->isi,
             'kategori' => $request->kategori,
-            'stts' => 'private',
+            'stts' => auth()->user()->role === 'super_admin' ? 'published' : 'private',
             'penulis' => $request->penulis,
             'gambar' => $gambarPath,
             'video' => $videoPath,
