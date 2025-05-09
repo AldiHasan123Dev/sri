@@ -76,7 +76,7 @@
                                     </div>
                                     @if($berita->video)
                                 <div class="mb-3 text-center">
-                                            <video controls style="max-width: 450px; border-radius: 8px;">
+                                            <video controls style="max-width: 4_50px; border-radius: 8px;">
                                                 <source src="{{ asset('storage/'.$berita->video) }}" type="video/mp4">
                                                 Browser Anda tidak mendukung pemutaran video.
                                             </video>
@@ -130,10 +130,10 @@
                         <label for="edit_kategori">Kategori</label>
                         <select class="form-control" id="edit_kategori" name="kategori" required>
                             <option value="" selected>Pilih Kategori</option>
-                            <option value="Prestasi">Prestasi</option>
-                            <option value="Kegiatan">Kegiatan</option>
-                            <option value="Berita">Berita</option>
-                            <option value="Informasi">Informasi</option>
+                            <option value="Ponpes">Ponpes</option>
+                            <option value="MTs">MTs</option>
+                            <option value="SMA">SMA</option>
+                            <option value="Madin">Madin</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -213,10 +213,10 @@
                         <label for="kategori">Kategori</label>
                         <select class="form-control" id="kategori" name="kategori" required>
                             <option value="" selected>Pilih Kategori</option>
-                            <option value="Prestasi">Pretasi</option>
-                            <option value="Kegiatan">Kegiatan</option>
-                            <option value="Berita">Berita</option>
-                            <option value="Informasi">Informasi</option>
+                            <option value="Ponpes">Ponpes</option>
+                            <option value="MTs">MTs</option>
+                            <option value="SMA">SMA</option>
+                            <option value="Madin">Madin</option>
                         </select>
                     </div>
                     <div class="mb-3">
